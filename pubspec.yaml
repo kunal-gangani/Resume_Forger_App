@@ -41,6 +41,8 @@ dependencies:
   flutter_iconpicker: ^3.4.4
   google_fonts: ^6.2.1
   font_awesome_flutter: ^10.7.0
+  image_picker: ^1.1.2
+  flexify: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +72,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
   - lib/views/SplashScreen/assets/
+  - lib/views/RegisterPage/assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

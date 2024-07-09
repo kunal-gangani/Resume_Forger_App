@@ -18,11 +18,11 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey.shade100,
       appBar: GradientAppBar(
         title: const Text("Resume Forger"),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           colors: [
-            Colors.green,
-            Colors.lightGreen,
-            Colors.lightGreenAccent,
+            Colors.blue.shade600,
+            Colors.blue.shade400,
+            Colors.blue.shade200,
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:flexify/flexify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,9 +25,13 @@ class MyApp extends StatelessWidget {
       designSize: Size(size.width, size.height),
       minTextAdapt: true,
       builder: (context, _) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          routes: Routes.myRoutes,
+        return Flexify(
+          designWidth: size.width,
+          designHeight: size.height,
+          app: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            routes: Routes.myRoutes,
+          ),
         );
       },
     );

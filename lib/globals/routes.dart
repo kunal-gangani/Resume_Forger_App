@@ -5,6 +5,7 @@ import 'package:resume_builder_app/views/HomePage/home_page.dart';
 import 'package:resume_builder_app/views/Objective/objective.dart';
 import 'package:resume_builder_app/views/PersonalDetails/personal_detail.dart';
 import 'package:resume_builder_app/views/Reference/reference.dart';
+import 'package:resume_builder_app/views/RegisterPage/register_page.dart';
 import 'package:resume_builder_app/views/Skills/skills.dart';
 import 'package:resume_builder_app/views/SplashScreen/splash_screen.dart';
 
@@ -17,6 +18,7 @@ class Routes {
   static String skills = 'Skills';
   static String objective = 'Objective';
   static String reference = 'Reference';
+  static String register = 'Register';
 
   static Map<String, WidgetBuilder> myRoutes = {
     splashScreen: (context) => const SplashScreen(),
@@ -27,5 +29,6 @@ class Routes {
     objective:(context) => const Objective(),
     reference:(context) => const Reference(),
     skills: (context) => const Skills(),
+    register:(context) => const RegisterPage(),
   };
 }
