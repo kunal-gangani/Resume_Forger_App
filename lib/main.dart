@@ -12,7 +12,9 @@ void main() {
       systemNavigationBarDividerColor: Colors.black,
     ),
   );
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {

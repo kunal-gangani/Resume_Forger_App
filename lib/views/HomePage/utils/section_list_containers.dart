@@ -1,15 +1,17 @@
-import 'package:flexify/flexify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'dart:developer';
 
-Widget sectionListContainers({required BuildContext context, required Map e}) {
+Widget sectionListContainers({
+  required BuildContext context,
+  required Map e,
+}) {
   return GestureDetector(
     onTap: () {
-      // Navigator.pushNamed(context, e['path']);
-      Flexify.goRemoveAll(
-        e['path'],
-        animation: FlexifyRouteAnimations.fade,
-        duration: const Duration(milliseconds: 2000),
+      log("Tap is clicked......");
+      Navigator.pushNamed(
+        context,
+        e['address'],
       );
     },
     child: Card(

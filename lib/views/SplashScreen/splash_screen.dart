@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flexify/flexify.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:resume_builder_app/globals/routes.dart';
+
 import 'package:resume_builder_app/views/RegisterPage/register_page.dart';
 
 class SplashScreen extends StatefulWidget {

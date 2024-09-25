@@ -41,18 +41,11 @@ class _HomePageState extends State<HomePage> {
               ),
               const Divider(),
               ...sectionsList.map(
-                (e) => sectionListContainers(context: context, e: e),
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              Text(
-                "More sections",
-                style: TextStyle(
-                  fontSize: 18.sp,
+                (e) => sectionListContainers(
+                  context: context,
+                  e: e,
                 ),
               ),
-              const Divider(),
             ],
           ),
         ),

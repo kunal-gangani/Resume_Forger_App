@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:resume_builder_app/globals/routes.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:resume_builder_app/globals/routes.dart';
 
 List sectionsList = [
   {
     'icon': FontAwesomeIcons.user,
     'name': "Personal Details",
-    'path': Routes.personalDetails,
+    'address': Routes.personalDetails,
   },
   {
     'icon': Icons.school,
     'name': "Education",
-    'path': Routes.education,
+    'address': Routes.educationPage,
   },
   {
     'icon': Icons.supervised_user_circle,
     'name': "Experience",
-    'path': Routes.experience,
+    'address': Routes.experiencePage,
   },
   {
     'icon': Icons.psychology,
     'name': "Skills",
-    'path': Routes.skills,
+    'address': Routes.skillsPage,
   },
   {
     'icon': FontAwesomeIcons.bullseye,
     'name': "Objective",
-    'path': Routes.objective,
+    'address': Routes.objectivesPage,
   },
   {
     'icon': FontAwesomeIcons.asterisk,
     'name': "Reference",
-    'path': Routes.reference,
+    'address': Routes.referencePage,
   },
 ];
