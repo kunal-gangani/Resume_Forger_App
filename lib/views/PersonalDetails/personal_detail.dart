@@ -14,6 +14,9 @@ class PersonalDetail extends StatefulWidget {
 }
 
 class _PersonalDetailState extends State<PersonalDetail> {
+  // tappedIndex variable to track which tab is selected
+  int tappedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -30,9 +33,7 @@ class _PersonalDetailState extends State<PersonalDetail> {
               Icons.arrow_back_ios_new_rounded,
             ),
           ),
-          title: const Text(
-            "Personal Details",
-          ),
+          title: const Text("Personal Details"),
           gradient: LinearGradient(
             colors: [
               Colors.blue.shade600,
@@ -42,9 +43,7 @@ class _PersonalDetailState extends State<PersonalDetail> {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(
-            16,
-          ),
+          padding: const EdgeInsets.all(16),
           child: Container(
             height: 600.h,
             width: double.infinity,
@@ -57,7 +56,7 @@ class _PersonalDetailState extends State<PersonalDetail> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    //personal details text container
+                    // Personal Details Tab
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
@@ -103,7 +102,7 @@ class _PersonalDetailState extends State<PersonalDetail> {
                         ),
                       ),
                     ),
-                    //image text container
+                    // Image Tab
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
@@ -131,17 +130,11 @@ class _PersonalDetailState extends State<PersonalDetail> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Icon(
-                                Icons.photo_camera,
-                              ),
-                              SizedBox(
-                                width: 10.w,
-                              ),
+                              const Icon(Icons.photo_camera),
+                              SizedBox(width: 10.w),
                               Text(
                                 "Image",
-                                style: TextStyle(
-                                  fontSize: 15.sp,
-                                ),
+                                style: TextStyle(fontSize: 15.sp),
                               ),
                             ],
                           ),
@@ -155,16 +148,11 @@ class _PersonalDetailState extends State<PersonalDetail> {
                   child: IndexedStack(
                     index: tappedIndex,
                     children: [
-                      personalDetailInfo(
-                        setState: setState,
-                      ),
-                      //Image Section
-                      cameraSection(
-                        context: context,
-                      ),
+                      PersonalDetailInfo(), // Personal Details Section
+                      CameraSection(), // Image Section
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

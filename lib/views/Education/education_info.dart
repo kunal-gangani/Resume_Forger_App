@@ -11,6 +11,7 @@ class Education extends StatefulWidget {
 }
 
 class _EducationState extends State<Education> {
+  // TextEditingController for the input fields
   final TextEditingController institutionController = TextEditingController();
   final TextEditingController degreeController = TextEditingController();
   final TextEditingController percentageController = TextEditingController();
@@ -32,149 +33,151 @@ class _EducationState extends State<Education> {
           ),
           content: SizedBox(
             width: 350.w,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // Institution Name Field
-                TextFormField(
-                  controller: institutionController,
-                  decoration: InputDecoration(
-                    labelText: "Institution Name",
-                    hintText: "Enter institution name",
-                    hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 15.sp,
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(
-                        color: Colors.black38,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Institution Name Field
+                  TextFormField(
+                    controller: institutionController,
+                    decoration: InputDecoration(
+                      labelText: "Institution Name",
+                      hintText: "Enter institution name",
+                      hintStyle: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 15.sp,
                       ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(
-                        color: Colors.blue.shade200,
-                        width: 2,
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                          color: Colors.black38,
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 10.h),
-
-                // Degree Name Field
-                TextFormField(
-                  controller: degreeController,
-                  decoration: InputDecoration(
-                    labelText: "Degree Name",
-                    hintText: "Enter degree",
-                    hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 15.sp,
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(
-                        color: Colors.black38,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(
-                        color: Colors.blue.shade200,
-                        width: 2,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(
+                          color: Colors.blue.shade200,
+                          width: 2,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 10.h),
+                  SizedBox(height: 10.h),
 
-                // Percentage Field
-                TextFormField(
-                  controller: percentageController,
-                  decoration: InputDecoration(
-                    labelText: "Percentage Obtained",
-                    hintText: "Enter percentage",
-                    hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 15.sp,
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(
-                        color: Colors.black38,
+                  // Degree Name Field
+                  TextFormField(
+                    controller: degreeController,
+                    decoration: InputDecoration(
+                      labelText: "Degree Name",
+                      hintText: "Enter degree",
+                      hintStyle: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 15.sp,
                       ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(
-                        color: Colors.blue.shade200,
-                        width: 2,
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                          color: Colors.black38,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(
+                          color: Colors.blue.shade200,
+                          width: 2,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 10.h),
+                  SizedBox(height: 10.h),
 
-                // Start and End Date Fields
-                Row(
-                  children: [
-                    Expanded(
-                      child: TextFormField(
-                        controller: startDateController,
-                        decoration: InputDecoration(
-                          labelText: "Start Date",
-                          hintText: "DD/MM/YYYY",
-                          hintStyle: TextStyle(
-                            fontSize: 15.sp,
-                            color: Colors.grey.shade800,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: const BorderSide(
-                              color: Colors.black38,
+                  // Percentage Field
+                  TextFormField(
+                    controller: percentageController,
+                    decoration: InputDecoration(
+                      labelText: "Percentage Obtained",
+                      hintText: "Enter percentage",
+                      hintStyle: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 15.sp,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                          color: Colors.black38,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(
+                          color: Colors.blue.shade200,
+                          width: 2,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10.h),
+
+                  // Start and End Date Fields
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          controller: startDateController,
+                          decoration: InputDecoration(
+                            labelText: "Start Date",
+                            hintText: "DD/MM/YYYY",
+                            hintStyle: TextStyle(
+                              fontSize: 15.sp,
+                              color: Colors.grey.shade800,
                             ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: BorderSide(
-                              color: Colors.blue.shade200,
-                              width: 2,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: const BorderSide(
+                                color: Colors.black38,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide(
+                                color: Colors.blue.shade200,
+                                width: 2,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                    SizedBox(width: 10.w),
-                    Expanded(
-                      child: TextFormField(
-                        controller: endDateController,
-                        decoration: InputDecoration(
-                          labelText: "End Date",
-                          hintText: "DD/MM/YYYY",
-                          hintStyle: TextStyle(
-                            fontSize: 15.sp,
-                            color: Colors.grey.shade800,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: const BorderSide(
-                              color: Colors.black38,
+                      SizedBox(width: 10.w),
+                      Expanded(
+                        child: TextFormField(
+                          controller: endDateController,
+                          decoration: InputDecoration(
+                            labelText: "End Date",
+                            hintText: "DD/MM/YYYY",
+                            hintStyle: TextStyle(
+                              fontSize: 15.sp,
+                              color: Colors.grey.shade800,
                             ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: BorderSide(
-                              color: Colors.blue.shade200,
-                              width: 2,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: const BorderSide(
+                                color: Colors.black38,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide(
+                                color: Colors.blue.shade200,
+                                width: 2,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
           actions: [
@@ -191,6 +194,7 @@ class _EducationState extends State<Education> {
             // Submit button
             ElevatedButton(
               onPressed: () {
+                // Add the new education details to the list
                 eduList.add({
                   'institution': institutionController.text,
                   'degree': degreeController.text,
@@ -199,11 +203,13 @@ class _EducationState extends State<Education> {
                   'endDate': endDateController.text,
                 });
 
+                // Clear the controllers
                 institutionController.clear();
                 degreeController.clear();
                 percentageController.clear();
                 startDateController.clear();
                 endDateController.clear();
+
                 setState(() {});
                 Navigator.pop(context);
               },
@@ -239,10 +245,7 @@ class _EducationState extends State<Education> {
         padding: const EdgeInsets.all(16),
         child: ListView.builder(
           itemCount: eduList.length,
-          itemBuilder: (
-            context,
-            index,
-          ) {
+          itemBuilder: (context, index) {
             return Card(
               color: Colors.blue.shade50,
               child: ListTile(
@@ -250,18 +253,10 @@ class _EducationState extends State<Education> {
                 subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Institution: ${eduList[index]['institution']}",
-                    ),
-                    Text(
-                      "Percentage: ${eduList[index]['percentage']}%",
-                    ),
-                    Text(
-                      "Start: ${eduList[index]['startDate']}",
-                    ),
-                    Text(
-                      "End: ${eduList[index]['endDate']}",
-                    ),
+                    Text("Institution: ${eduList[index]['institution']}"),
+                    Text("Percentage: ${eduList[index]['percentage']}%"),
+                    Text("Start: ${eduList[index]['startDate']}"),
+                    Text("End: ${eduList[index]['endDate']}"),
                   ],
                 ),
               ),
@@ -271,9 +266,7 @@ class _EducationState extends State<Education> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: addEducationEntry,
-        child: const Icon(
-          Icons.add,
-        ),
+        child: const Icon(Icons.add),
       ),
     );
   }
